@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sabina Paprikash</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <label class="main-name">Sabina Paprikash</label>
+        <img src="Images/menu.png" width="50" height="50">
+    </header>
+
+    <section class="header-bg"></section>
+
+    <section class="site-content">
+
+        <div class="image-container">
+            <img src="Images/placeholder1.png" width="100%">
+        </div>
+
+        <div class="image-container">
+            <img src="Images/placeholder2.png" width="100%">
+        </div>
+
+        <div class="image-container">
+            <img src="Images/placeholder3.png" width="100%">
+        </div>
+
+        <div class="image-container">
+            <img src="Images/placeholder4.png" width="100%">
+        </div>
+
+    </section>
+</body>
+
+</html>
+
+<script>
+    document.addEventListener('scroll', function() {
+    const images = document.querySelectorAll('.image-container');
+
+        images.forEach((image, index) => {
+            const offset = (window.scrollY * (1 + (index/2)));
+            image.style.transform = `translateY(-${offset}px)`;
+
+            const imageNumber = index + 1;
+            console.log(`Image ${imageNumber}`);
+        });
+    });
+
+</script>
