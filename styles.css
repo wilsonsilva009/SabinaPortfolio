@@ -21,6 +21,8 @@ header{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    background: rgba(47, 46, 46, 0.5);
 }
 
 /*          Header          */
@@ -112,6 +114,17 @@ header>img:active{
     color: white;
     border: 2px solid white;
     text-transform: uppercase;
+
+    transition: transform .5s ease;
+    cursor: pointer;
+}
+
+.image-container button:hover{
+    transform: translateX(-50%) scale(1.1);
+}
+
+.image-container button:active{
+    filter: brightness(0.8);
 }
 
 /*
