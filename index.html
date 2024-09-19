@@ -7,12 +7,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sabina Paprikash</title>
 	<link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
     <header>
         <label class="main-name">Sabina Paprikash</label>
-        <img src="Images/menu.png" width="50" height="50">
+        <img src="Images/menu.png" width="50" height="50" onclick="ToggleMenu()">
+        <div id="menu">
+            <a>Menu 1</a>
+            <a>Menu 2</a>
+            <a>Menu 3</a>
+        </div>
     </header>
 
     <section class="header-bg"></section>
@@ -21,36 +27,25 @@
 
         <div class="image-container">
             <img src="Images/placeholder1.png" width="100%">
+            <a href="" target="_blank"><button>View Project</button></a>
         </div>
 
         <div class="image-container">
             <img src="Images/placeholder2.png" width="100%">
+            <a href="" target="_blank"><button>View Project</button></a>
         </div>
 
         <div class="image-container">
             <img src="Images/placeholder3.png" width="100%">
+            <a href="" target="_blank"><button>View Project</button></a>
         </div>
 
         <div class="image-container">
             <img src="Images/placeholder4.png" width="100%">
+            <a href="" target="_blank"><button>View Project</button></a>
         </div>
 
     </section>
 </body>
 
 </html>
-
-<script>
-    document.addEventListener('scroll', function() {
-    const images = document.querySelectorAll('.image-container');
-
-        images.forEach((image, index) => {
-            const offset = (window.scrollY * (1 + (index/2)));
-            image.style.transform = `translateY(-${offset}px)`;
-
-            const imageNumber = index + 1;
-            console.log(`Image ${imageNumber}`);
-        });
-    });
-
-</script>

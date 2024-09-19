@@ -1,4 +1,8 @@
 /*          Principal Stylings          */
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     position: relative;
     margin: 0;
@@ -6,6 +10,7 @@ body{
 }
 
 header{
+    z-index: 100;
     position: fixed;
     top: 0;
     left: 0;
@@ -21,7 +26,7 @@ header{
 /*          Header          */
 
 header>*{
-    margin: 0 3rem;
+    margin: 0 5vw;
 }
 
 .header-bg{
@@ -37,6 +42,24 @@ header>*{
     text-transform: uppercase;
 }
 
+#menu{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: start;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateY(8rem);
+    width: 15em;
+}
+
+#menu a{
+    color: white;
+    font-size: 2rem;
+}
+
 /*          Site Content          */
 /* Site Content */
 .site-content {
@@ -46,8 +69,10 @@ header>*{
 
 .image-container {
     width: 100%;
-    height: 100vh; /* Full viewport height for each section */
-    position: relative;
+    /*height: 100vh;*/
+    height: 1080px;
+    position: sticky;
+    top: 0;
 }
 
 .image-container img {
@@ -55,8 +80,21 @@ header>*{
     object-position: 50% 50%;
     width: 100%;
     height: 100%;
-    position: relative; /* Stick to the top of the viewport */
-    top: 0;
+}
+
+
+.image-container button{
+    position: absolute;
+    bottom: 75vh;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    background: transparent;
+    border-radius: 25px;
+    padding: 10px 30px;
+    color: white;
+    border: 2px solid white;
+    text-transform: uppercase;
 }
 
 /*
