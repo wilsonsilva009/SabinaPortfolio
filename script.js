@@ -5,8 +5,22 @@ document.addEventListener('DOMContentLoaded', function() {
     images.forEach((img, index) => {
         img.style.zIndex = ++zIndex;
     });
-
-    function ToggleMenu(){
-        menu = document.querySelector("");
-    }
 });
+
+let MenuOpen = false;
+function ToggleMenu(){
+    menu = document.querySelector("#menu");
+
+    if (!MenuOpen)
+    {
+        menu.style.opacity = '1';
+        menu.style.transform = 'translateY(8rem)';
+    }
+    else
+    {
+        menu.style.opacity = '0';
+        menu.style.transform = 'translateY(6.5rem)';
+    }
+
+    MenuOpen = !MenuOpen;
+}

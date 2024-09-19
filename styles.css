@@ -29,6 +29,19 @@ header>*{
     margin: 0 5vw;
 }
 
+header>img{
+    cursor: pointer;
+    transition: transform .3s ease;
+}
+
+header>img:hover{
+    transform: scale(1.15);
+}
+
+header>img:active{
+    filter: brightness(.7);
+}
+
 .header-bg{
     background: #2F2E2E;
     width: 100%;
@@ -53,6 +66,10 @@ header>*{
     top: 0;
     transform: translateY(8rem);
     width: 15em;
+
+    opacity: 0;
+    transform: translateY(6.5rem);
+    transition: transform .5s ease, opacity .5s ease;
 }
 
 #menu a{
