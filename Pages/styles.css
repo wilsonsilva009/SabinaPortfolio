@@ -25,10 +25,18 @@ body{
     background: linear-gradient(to right, rgb(253 0 255) -50%, #4a7596);
 }
 
+/*.color-effect{
+    height: 500vh;
+    position: absolute;
+    left: 0;
+    box-shadow: 0 0 200px 100px rgb(253 0 255);
+}*/
+
 .content-holder{
     margin: 0 auto;
     width: 85%;
     position: relative;
+    padding-bottom: 5%;
 }
 
 #title{
@@ -37,6 +45,7 @@ body{
     font-size: 4rem;
     text-align: center;
     margin: 0 auto 1.5rem 0;
+    padding-top: 2%;
     filter: drop-shadow(0px 0px 3px white);
 }
 
@@ -61,9 +70,13 @@ body{
     margin: 0 auto;
 }
 
-/*.color-effect{
-    height: 500vh;
-    position: absolute;
-    left: 0;
-    box-shadow: 0 0 200px 100px rgb(253 0 255);
-}*/
+/*          Mobile Phones          */
+@media only screen and (max-width: 600px) {
+    .image-galery{
+        gap: 2rem;
+    }
+
+    .image-galery img{
+        width: 100%;
+    }
+}
