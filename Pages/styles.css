@@ -22,12 +22,13 @@ body{
 /*          Site content          */
 .site-content{
     width: 100%;
-    background: linear-gradient(to right, #4e3f55, #4a7596);
+    background: linear-gradient(to right, rgb(253 0 255) -50%, #4a7596);
 }
 
 .content-holder{
     margin: 0 auto;
     width: 85%;
+    position: relative;
 }
 
 #title{
@@ -42,7 +43,7 @@ body{
 #description{
     color: white;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     text-align: justify;
     text-wrap: pretty;
 }
@@ -50,7 +51,19 @@ body{
 .image-galery{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 4rem;
 
     margin-top: 5rem;
+}
+
+.image-galery img{
+    width: 75%;
+    margin: 0 auto;
+}
+
+.color-effect{
+    height: 500vh;
+    position: absolute;
+    left: 0;
+    box-shadow: 0 0 200px 100px rgb(253 0 255);
 }
