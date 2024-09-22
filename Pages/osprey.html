@@ -7,9 +7,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Osprey</title>
 	<link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
+
+
+    <section class="image-slide">
+        <div id="image-holder">
+            <img src="../Images/placeholder4.png" width="100%">
+            <div id="image-switch-buttons">
+                <img src="../Images/arrow-flipped.webp" width="50px" onclick="SwitchImage('l')">
+                <img src="../Images/arrow.webp" width="50px" onclick="SwitchImage('r')">
+            </div>
+            <button onclick="CloseImage()">X</button>
+        </div>
+    </section>
 
 
     <section class="header-image">
@@ -18,7 +31,7 @@
 
     <section class="site-content">
 
-        <!--<div class="color-effect"></div>-->
+        <div class="color-effect"></div>
 
         <div class="content-holder">
 
@@ -26,33 +39,23 @@
             <h1 id="title">Osprey</h1>
 
             <p id="description">
-                Szczecin Paprikash is an absolute culinary gem from Poland that you *have* to experience! 
-                Bursting with vibrant flavors, this hearty dish is a brilliant fusion of tender meats, fragrant 
-                paprika, and rich, creamy sauces that will transport your taste buds to a world of comfort and warmth. 
-                Originating from the port city of Szczecin, this version of paprikash holds its own with its bold, 
-                smoky undertones and slight spice kick that perfectly balances the savory richness of the dish.
-
-                What makes Szczecin Paprikash stand out? It's the unique blend of local Polish ingredients with hints 
-                of Hungarian influence, creating a flavor profile that is both familiar and exotic. Whether you're a fan 
-                of chicken, beef, or even pork, the versatility of this dish is astounding. Imagine succulent, slow-cooked 
-                meat melting in your mouth, with a sauce so luxurious that you’ll want to mop up every last drop with fresh, 
-                crusty bread.
-
-                This dish is not just food; it's an experience—a warm hug in a bowl that captures the essence of Polish 
-                hospitality and heart. If you're in Szczecin or anywhere in Poland, don't miss out on this must-try dish.
+                Adalynn Leigh is a military sharpshooter on a faraway planet, leading a double life as an assassin. <br>
+                Her life started rough. She grew up in a secret facility, kidnapped or given up by her parents. From the youngest age she was subjected to intensive training to become the perfect weapon. When the results didn’t meet the expectations of her teachers, she was subjected to multiple scientific experiments and upgrades. Her canines were replaced by titanium caps. Her right eye was replaced with cybernetic one. Despite promises of enhancement, those new elements became a source of pain and incomprehensible sensations. Adalynn spent most of her youth suffering.
+                Her fate turned around when she managed to escape the facility and reach the street of a metropoly, where the everlasting darkness revealed the true potential of her cybernetic eye. The ability to see in a complete darkness and automatically scan the environment for threats and valuables allowed her to survive even when she had nothing. <br>
+                The planet she was born on was divided. Despite the southern hemisphere being uninhabitable, the northern one hosted many countries locked in a constant war. With nowhere to go, Adalynn was forced to join local military. Thanks to her cybernetic eye, she soon became one the best sharpshooters the military has known. Having no need for a scope, she even modified her sniper rifle to only rely on her eye and a simple holographic sight. Furthermore, her slight built and agility, further enhanced by cybernetic upgrades, allowed her to move freely and discretely through any terrain. <br>
+                But military life was not the end of Adalynn’s story. She also worked as an assassin, using the codename Osprey. Most of her clients were anonymous, but she hoped that through them she could find the organization that mutilated her and take her revenge. 
             </p>
 
             <div class="image-galery">
-                <img src="../Images/placeholder4.png">
-                <img src="../Images/placeholder4.png">
-                <img src="../Images/placeholder4.png">
-                <img src="../Images/placeholder4.png">
+                <img src="../Images/placeholder1.png" onclick="ClickImage(this)">
+                <img src="../Images/placeholder2.png" onclick="ClickImage(this)">
+                <img src="../Images/placeholder3.png" onclick="ClickImage(this)">
+                <img src="../Images/placeholder4.png" onclick="ClickImage(this)">
             </div>
 
 
         </div>
     </section>
-    
 
 
 </body>

@@ -22,14 +22,14 @@ body{
 /*          Site content          */
 .site-content{
     width: 100%;
-    background: linear-gradient(to right, rgb(253 0 255) -50%, #4a7596);
+    background: linear-gradient(to right, rgb(173 53 82) -45%, #1f1f23, #3d6181)
 }
 
 /*.color-effect{
     height: 500vh;
     position: absolute;
     left: 0;
-    box-shadow: 0 0 200px 100px rgb(253 0 255);
+    box-shadow: 0 0 200px 100px rgb(173 53 82);
 }*/
 
 .content-holder{
@@ -55,6 +55,7 @@ body{
     font-size: 1.3rem;
     text-align: justify;
     text-wrap: pretty;
+    line-height: 1.8rem;
 }
 
 .image-galery{
@@ -66,8 +67,85 @@ body{
 }
 
 .image-galery img{
-    width: 75%;
+    width: 100%;
     margin: 0 auto;
+}
+
+
+/*          Image slideshow          */
+.image-slide{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity .3s ease;
+}
+
+#image-switch-buttons{
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+    left: 2.5%;
+    width: 95%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#image-holder{
+    position: relative;
+    width: 50%;
+    max-height: 100vh;
+}
+
+#image-holder>img{
+    border: 3px solid white;
+    border-radius: 25px;
+    box-shadow: 0px 0px 15px 2px white;
+}
+
+#image-holder button{
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+
+
+    border: 3px solid white;
+    background: linear-gradient(to top, black -116%, transparent);
+
+    color: white;
+    font-size: 3rem;
+    border-radius: 100%;
+}
+
+#image-switch-buttons img{
+    border: 3px solid white;
+    border-radius: 25px;
+
+    transition: transform .3s ease;
+}
+
+#image-switch-buttons img:hover{
+    filter: brightness(.9);
+}
+
+#image-switch-buttons img:active{
+    filter: brightness(.7);
+    transform: scale(.9);
 }
 
 /*          Mobile Phones          */
@@ -78,5 +156,9 @@ body{
 
     .image-galery img{
         width: 100%;
+    }
+
+    #image-holder{
+        width: 90%;
     }
 }
