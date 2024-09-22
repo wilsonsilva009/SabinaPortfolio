@@ -1,0 +1,5 @@
+Add button for phone to scroll up to the top, fixed at bottom left
+
+Fix the ugly X button or make the user click outside to close?
+
+Move clown picture at top down?
