@@ -1,6 +1,6 @@
 /*     Principal Styling     */
 body{
-    background: linear-gradient(45deg, black, #111);
+    background: linear-gradient(45deg, black, #222);
     min-height: 100vh;
     font-family: 'Comic Sans','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -13,6 +13,7 @@ header{
 
 header img{
     border-radius: 100%;
+    box-shadow: 0px 0px 60px -15px orange;
 }
 
 /*     Site content     */
@@ -33,6 +34,16 @@ header img{
 }
 
 /*     Contact form     */
+.color-effect{
+    position: absolute;
+    width: 13rem;
+    right: 50%;
+    transform: translateX(50%);
+
+    box-shadow: 0 0 400px 45px rgb(255 167 0);
+    z-index: -1;
+}
+
 .contact-form{
     display: flex;
     flex-direction: column;
@@ -90,6 +101,70 @@ form{
 
     background: none;
     border: none;
+}
+
+/*     Animations     */
+#title1, #title2{
+    position: relative;
+    width: fit-content;
+    margin: 2rem auto;
+}
+
+#title1{
+    padding-right: 10px;
+    border-right: rgba(255,255,255,0) solid 3px;
+
+    animation: caret-blink .8s 3 1s;
+}
+
+#title2{
+    padding-right: 10px;
+    border-right: rgba(255,255,255,0) solid 3px;
+
+    animation: caret-blink .8s 3 4s;
+}
+
+#title1::before{
+    animation: typewrite 1s forwards;
+}
+
+#title2::before{
+    animation: typewrite 1s forwards 3s;
+}
+
+#title1::before, #title2::before{
+    content: '';
+    background-color: #1A1A1A;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+@keyframes typewrite {
+    0%{
+        width: 100%;
+    }
+    
+    100%{
+        width: 0%;
+    }
+}
+
+@keyframes caret-blink {
+    0%{
+        border-right: rgba(255,255,255,0) solid 3px;
+    }
+
+    50%{
+        border-right: rgba(255,255,255,1) solid 3px;
+    }
+
+    100%{
+        border-right: rgba(255,255,255,0) solid 3px;
+    }
 }
 
 /*     Mobile Phones     */
