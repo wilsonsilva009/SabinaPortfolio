@@ -1,7 +1,7 @@
 About me, contact pages
 
 Pages must:
-+ be dark grey, almost black not completely
-+ have white text
++ be dark grey, almost black not completely [V]
++ have white text [V]
 + colored details like titles in gradient
 + cool effects, like fading in-out (Bollywood films)
