@@ -13,14 +13,13 @@
 <body>
 
 
-    <section class="image-slide">
-        <div id="image-holder">
+    <section class="image-slide" onclick="CloseImage()">
+        <div id="image-holder" onclick="event.stopPropagation()">
             <img src="../Images/placeholder4.png" width="100%">
             <div id="image-switch-buttons">
                 <img src="../Images/arrow-flipped.webp" width="50px" onclick="SwitchImage('l')">
                 <img src="../Images/arrow.webp" width="50px" onclick="SwitchImage('r')">
             </div>
-            <button onclick="CloseImage()">X</button>
         </div>
     </section>
 

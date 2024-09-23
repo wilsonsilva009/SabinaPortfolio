@@ -39,3 +39,4 @@ function CloseImage() {
     ImageSlide.style.opacity = "0";
     ImageSlide.style.pointerEvents = "none";
 }
+

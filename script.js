@@ -24,3 +24,12 @@ function ToggleMenu(){
 
     MenuOpen = !MenuOpen;
 }
+
+window.onscroll = function() {
+    const phone_button = document.querySelector("#phone-scroll-button");
+    if (window.scrollY > 100) {
+        phone_button.style.display = "inherit";
+    }else{
+        phone_button.style.display = "none";
+    }
+};
