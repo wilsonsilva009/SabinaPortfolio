@@ -13,12 +13,16 @@ header{
 
 header img{
     border-radius: 100%;
-    box-shadow: 0px 0px 60px -15px orange;
+    box-shadow: 0px 0px 0px -15px orange;
+
+    animation: pfp-anim 1s ease forwards 6.5s;
 }
 
 /*     Site content     */
 .site-content{
     margin: 0 10%;
+
+    animation: site-content-anim 1.5s ease forwards;
 }
 
 .description{
@@ -164,6 +168,30 @@ form{
 
     100%{
         border-right: rgba(255,255,255,0) solid 3px;
+    }
+}
+
+@keyframes pfp-anim {
+    0%{
+        box-shadow: 0px 0px 0px -15px orange;
+    }
+
+    100%{
+        box-shadow: 0px 0px 60px -15px orange;
+    }
+}
+
+@keyframes site-content-anim{
+    0%{
+        display: none;
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100%{
+        display: inherit;
+        transform: translateY(0px);
+        opacity: 1;
     }
 }
 
