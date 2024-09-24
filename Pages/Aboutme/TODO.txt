@@ -4,4 +4,4 @@ Pages must:
 + be dark grey, almost black not completely [V]
 + have white text [V]
 + colored details like titles in gradient [V]
-+ cool effects, like fading in-out (Bollywood films)
++ cool effects, like fading in-out (Bollywood films) [V]
