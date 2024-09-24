@@ -39,7 +39,9 @@ header img{
 
 .description label{
     font-size: 3rem;
+    font-weight: bold;
     margin-left: 1.5rem;
+    color: #ffbb3f;
 }
 
 /*     Contact form     */
@@ -114,14 +116,14 @@ form{
 }
 
 #view-cv {
-    background-color: #111;
-    color: white;
+    background: transparent;
+    color: #ffbd42;
     border-radius: 25px;
     width: fit-content;
-    font-size: 2.5rem;
-    padding: .5rem 1rem;
+    font-size: 2rem;
+    padding: 1rem 1.5rem;
     text-align: center;
-    border: 4px solid orange;
+    border: 4px groove #ffc356a1;
     box-shadow: 0px 0px 60px -15px orange;
     margin: 5rem auto 10rem auto;
     cursor: pointer;
