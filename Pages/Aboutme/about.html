@@ -13,7 +13,7 @@
 <body>
     <header>
         <h1 id="title1">Hello</h1>
-        <h2 id="title2">I'm <span style="color: orange;">Sabina</span></h2>
+        <h2 id="title2">I'm <span>Sabina</span></h2>
         <img src="Images/pfp.jpg" width="15%">
     </header>
 
@@ -57,13 +57,21 @@
             </p>
         </div>
 
-        <a href="cv.pdf" style="cursor: default;"><div id="view-cv">View CV</div></a>
+        <div id="cv-holder">
+            <a href="cv.pdf" style="cursor: default;">
+                <div id="view-cv">
+                    View CV
+                </div>
+            </a>
+            <img src="Images/spiral_arrow_left.webp" width="155px">
+            <label>See my certifications here!</label>
+        </div>
 
         <div class="contact-form">
 
             <div class="color-effect"></div>
 
-            <label>Lets get to <span style="color: orange; font-weight: bold;">know eachother?</span></label>
+            <label>Lets get to <span>know eachother?</span></label>
 
             <form action="" method="POST">
                 

@@ -1,3 +1,12 @@
+/*     Color Schemes     */
+:root{
+    --color1: #EFF1ED;
+    --color2: #1A181B;
+    --color3: #B33951;
+    --color4: #3E8989;
+    --color5: #007C77;
+}
+
 /*     Principal Styling     */
 body{
     background: linear-gradient(45deg, black, #222);
@@ -11,19 +20,22 @@ a{
 }
 
 header{
-    color: white;
+    color: var(--color1);
     font-size: 2rem;
     text-align: center;
 }
 
 header img{
     border-radius: 100%;
-    box-shadow: 0px 0px 0px -15px orange;
 
     animation: pfp-anim 1s ease forwards 6.5s;
 }
 
 /*     Site content     */
+#title2 span{
+    color: var(--color3)
+}
+
 .site-content{
     margin: 0 10%;
 
@@ -32,7 +44,7 @@ header img{
 
 .description{
     margin-top: 10%;
-    color: white;
+    color: var(--color1);
     font-size: 1.5rem;
     text-align: justify;
 }
@@ -41,17 +53,22 @@ header img{
     font-size: 3rem;
     font-weight: bold;
     margin-left: 1.5rem;
-    color: #ffbb3f;
+    color: var(--color5); /*#ffbb3f*/
 }
 
 /*     Contact form     */
+.contact-form>label>span{
+    color: var(--color5);
+    font-weight: bold;
+}
+
 .color-effect{
     position: absolute;
     width: 13rem;
     right: 50%;
     transform: translateX(50%);
 
-    box-shadow: 0 0 400px 15px rgb(255 167 0);
+    box-shadow: 0 0 400px 15px var(--color5); /*rgb(255 167 0)*/
     z-index: -1;
 }
 
@@ -64,7 +81,7 @@ header img{
 }
 
 .contact-form>label{
-    color: white;
+    color: var(--color1);
     font-size: 3rem;
     margin-bottom: 5%;
     text-align: center;
@@ -80,7 +97,7 @@ form{
 .input-field{
     display: flex;
     flex-direction: column;
-    color: white;
+    color: var(--color1);
 
     font-size: 2rem;
 }
@@ -92,45 +109,58 @@ form{
 .input-field *:not(label){
     background: transparent;
     border: 0;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid var(--color1);
     font-size: 1.3rem;
-    color: white;
+    color: var(--color1);
 }
 
 .submit-button{
-    background-color: white;
+    background-color: var(--color1);
     border-radius: 20px;
-    width: 17.5rem;
+    width: 15rem;
     display: flex;
     padding: 7px;
     border: 6px solid black;
 }
 
 .submit-button input{
-    color: #111;
+    color: var(--color2); 
     font-size: 2rem;
     font-weight: bold;
+    font-family: "Calibri";
 
     background: none;
     border: none;
 }
 
-#view-cv {
+#view-cv{
     background: transparent;
-    color: #ffbd42;
+    color: var(--color5); /*#ffbd42*/
     border-radius: 25px;
-    width: fit-content;
-    font-size: 2rem;
+    font-size: clamp(1rem, 2vw, 100vw);
     padding: .8rem 1.5rem;
     text-align: center;
-    border: 4px outset #ffc356a1;
-    box-shadow: 0px 0px 60px -15px orange;
-    margin: 5rem auto 10rem auto;
+    border: 4px outset var(--color5); /*#ffc356a1*/
+    box-shadow: 0px 0px 60px -15px var(--color5); /*orange*/
     cursor: pointer;
     font-family: Arial;
     font-weight: bold;
 }
 
+#cv-holder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    margin: 5rem auto 10rem 44%;
+    width: fit-content;
+}
+
+#cv-holder label{
+    color: var(--color1);
+    font-size: 1.5rem;
+}
 
 /*     Animations     */
 #title1, #title2{
@@ -198,11 +228,11 @@ form{
 
 @keyframes pfp-anim {
     0%{
-        box-shadow: 0px 0px 0px -15px orange;
+        box-shadow: 0px 0px 0px -15px var(--color3);
     }
 
     100%{
-        box-shadow: 0px 0px 60px -15px orange;
+        box-shadow: 0px 0px 60px -15px var(--color3);
     }
 }
 
