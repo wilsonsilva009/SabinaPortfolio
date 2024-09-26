@@ -2,9 +2,9 @@
 :root{
     --color1: #EFF1ED;
     --color2: #1A181B;
-    --color3: #B33951;
+    --color3: #c51311;;
     --color4: #3E8989;
-    --color5: #007C77;
+    --color5: #0ec5bd;;
 }
 
 /*     Principal Styling     */
@@ -26,6 +26,8 @@ header{
 }
 
 header img{
+    width: clamp(200px, 30vw, 250px);
+
     border-radius: 100%;
 
     animation: pfp-anim 1s ease forwards 6.5s;
@@ -145,6 +147,13 @@ form{
     cursor: pointer;
     font-family: Arial;
     font-weight: bold;
+    
+    transition: transform .1    s ease;
+}
+
+#view-cv:active{
+    filter: brightness(0.8);
+    transform: scale(.95);
 }
 
 #cv-holder{
@@ -157,9 +166,16 @@ form{
     width: fit-content;
 }
 
+#cv-holder img{
+    width: clamp(70px, 20vw, 155px);
+    transform: translateY(-18px);
+}
+
 #cv-holder label{
+    font-family: Times New Roman;
     color: var(--color1);
     font-size: 1.5rem;
+    transform: translateY(-18px);
 }
 
 /*     Animations     */
@@ -257,15 +273,21 @@ form{
         margin: 0 5%;
     }
 
-    header img{
-        width: 80%;
-    }
-
     .description>label{
-        text-align: center;
+        display: block;
+        margin: 0 auto;
+        width: fit-content;
     }
 
     .submit-button{
         align-self: center;
+    }
+
+    #cv-holder{
+        margin: 5rem auto;
+    }
+
+    #cv-holder img, #cv-holder label{
+        display: none;
     }
 }
