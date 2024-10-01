@@ -11,87 +11,89 @@
 </head>
 
 <body>
-    <header>
-        <h1 id="title1">Hello</h1>
-        <h2 id="title2">I'm <span>Sabina</span></h2>
-        <img src="Images/pfp.jpg">
-    </header>
+    <section id="pages" class="site-content">
 
-    <section class="site-content">
-        <div class="description">
-            <label>About me</label>
-            <p>
-                Hello, I’m the one who can’t land a job even at McDonald's. 
-                Been to like 5 stage interviews for them and even did 5 demonstrations of my work
-                only for them to reject me and still use my art. But cool, I guess. Clown school 
-                didn’t prepare me for this level of jokes.
-            </p>
-        </div>
+        <section id="page1">
+            <header>
+                <h1 id="title1">Hello</h1>
+                <h2 id="title2">I'm <span>Sabina</span></h2>
+                <img src="Images/pfp.jpg">
+            </header>
 
-        <div class="description">
-            <label>My life</label>
-            <p>
-                My life is as big as my unemployment. Every time I get the same: “We’re looking 
-                for someone like you! ... just not... you." I swear, if there was a language called
-                rejection, I would be a native speaker. But hey, finally something worthwhile to put
-                on my portfolio, right?
-            </p>
-        </div>
+            <div id="cv-holder">
+                <a href="cv.pdf" style="cursor: default;">
+                    <div id="view-cv">
+                        View CV
+                    </div>
+                </a>
+                <img src="Images/spiral_arrow_left.webp">
+                <label>See my certifications here!</label>
+            </div>
+        </section><!--End of #page1-->
 
-        <div class="description">
-            <label>My tools</label>
-            <p>
-                I’ve got the essentials. One computer, blender, a dream and tons of piwo. They say dreams 
-                come true and I get to experience it every day, getting rejected! Perhaps its my fault
-                for not investing at 3 years old instead of learning how to talk...
-            </p>
-        </div>
 
-        <div class="description">
-            <label>More about me</label>
-            <p>
-                So, more about me? I’m basically a walking rejection letter. They said McDonalds
-                hires literally anyone but guess I'm no one. I tried to move into other stuff, 
-                but apparently being good at modeling doesn't make me good at serving drinks. 
-                Shocking. You know what else is shocking? Our sponsor, RAID: Shadow Legends. 
-            </p>
-        </div>
-
-        <div id="cv-holder">
-            <a href="cv.pdf" style="cursor: default;">
-                <div id="view-cv">
-                    View CV
+        <section id="page2">
+                <div class="description" style="margin-top: 0;">
+                    <label>About me</label>
+                    <p>
+                        Hello, I’m the one who can’t land a job even at McDonald's. 
+                        Been to like 5 stage interviews for them and even did 5 demonstrations of my work
+                        only for them to reject me and still use my art. But cool, I guess. Clown school 
+                        didn’t prepare me for this level of jokes.
+                    </p>
                 </div>
-            </a>
-            <img src="Images/spiral_arrow_left.webp">
-            <label>See my certifications here!</label>
-        </div>
 
-        <div class="contact-form">
-
-            <div class="color-effect"></div>
-
-            <label>Lets get to <span>know eachother?</span></label>
-
-            <form action="" method="POST">
-                
-                <div class="input-field">
-                    <label>Subject</label>
-                    <input name="Subject" style="font-family: monospace;" type="text" label="Insert Subject" placeholder="Insert the subject here" required>
+                <div class="description">
+                    <label>My tools</label>
+                    <p>
+                        I’ve got the essentials. One computer, blender, a dream and tons of piwo. They say dreams 
+                        come true and I get to experience it every day, getting rejected! Perhaps its my fault
+                        for not investing at 3 years old instead of learning how to talk...
+                    </p>
                 </div>
-                
-                <div class="input-field">
-                    <label>Message</label>
-                    <textarea name="Message" style="resize: none;" placeholder="Insert the message here" rows="10" cols="50" required></textarea>
+
+                <div class="description">
+                    <label>More about me</label>
+                    <p>
+                        So, more about me? I’m basically a walking rejection letter. They said McDonalds
+                        hires literally anyone but guess I'm no one. I tried to move into other stuff, 
+                        but apparently being good at modeling doesn't make me good at serving drinks. 
+                        Shocking. You know what else is shocking? Our sponsor, RAID: Shadow Legends. 
+                    </p>
                 </div>
-                
-                <div class="submit-button">
-                    <input type="submit" label="Submit" value="Send Message"><img src="Images/send.webp" width="15%">
-                </div>
-                
-            </form>
-        </div>
-    </section>
+
+        </section><!--End of #page2-->
+
+        <section id="page3">
+
+            <div class="contact-form">
+
+                <div class="color-effect"></div>
+
+                <label>Lets get to <span>know eachother?</span></label>
+
+                <form action="" method="POST">
+                    
+                    <div class="input-field">
+                        <label>Subject</label>
+                        <input name="Subject" style="font-family: monospace; padding-bottom: 10px;" type="text" label="Insert Subject" placeholder="Insert the subject here" required>
+                    </div>
+                    
+                    <div class="input-field">
+                        <label>Message</label>
+                        <textarea name="Message" style="resize: none;" placeholder="Insert the message here" rows="10" cols="50" required></textarea>
+                    </div>
+                    
+                    <div class="submit-button">
+                        <input type="submit" label="Submit" value="Send Message"><img src="Images/send.webp" width="15%">
+                    </div>
+                    
+                </form>
+            </div><!--End of .contact-form-->
+
+        </section> <!--End of #page3-->
+
+    </section> <!--End of #pages-->
 
 </body>
 
