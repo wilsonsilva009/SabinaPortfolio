@@ -63,19 +63,10 @@ header img{
     margin: 0 10%;
 }
 
-.description{
-    margin-top: 10%;
-    color: var(--color1);
-    font-size: 1.5rem;
-    text-align: justify;
+#page2 img{
+    width: clamp(200px, 30vw, 250px);
 }
 
-.description label{
-    font-size: 3rem;
-    font-weight: bold;
-    margin-left: 1.5rem;
-    color: var(--color5); /*#ffbb3f*/
-}
 
 /*     Contact form     */
 .contact-form>label>span{
