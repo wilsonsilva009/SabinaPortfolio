@@ -17,6 +17,16 @@ function detectScrollDirection(event) {
         currentIndex--;
     }
 
+    if (currentIndex == 1){
+        document.querySelector("#main-image").style.top = "131vh";
+        document.querySelector("#main-image").style.left = "10%";
+        document.querySelector("#main-image").style.transform = "translateX(0px)";
+    }else{
+        document.querySelector("#main-image").style.top = "40vh";
+        document.querySelector("#main-image").style.left = "50%";
+        document.querySelector("#main-image").style.transform = "translateX(-50%)";
+    }
+    
     
     if (currentIndex >= pages.length) {
         currentIndex = 0;

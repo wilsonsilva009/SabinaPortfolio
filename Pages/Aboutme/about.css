@@ -13,6 +13,7 @@ body{
     min-height: 100vh;
     font-family: 'Comic Sans','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     overflow: hidden;
+    position: relative;
 }
 
 a{
@@ -26,12 +27,18 @@ header{
     text-align: center;
 }
 
-header img{
-    width: clamp(200px, 30vw, 250px);
+#main-image{
+    position: absolute;
+    top: 40vh;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: clamp(150px, 25vw, 250px);
 
     border-radius: 100%;
 
     animation: pfp-anim 1s ease forwards 6.5s;
+    transition: transform .9s ease, top .9s ease, left .9s ease;
 }
 
 /*     Pages Styling     */
@@ -76,7 +83,7 @@ header img{
     align-items: center;
 
 
-    margin: 6.5rem auto 1rem 43%;
+    margin: 50vh auto 1rem 43%;
     width: fit-content;
 }
 
@@ -91,7 +98,6 @@ header img{
     font-size: 1.5rem;
     transform: translateY(-18px);
 }
-
 
 #page3{
     padding-top: 5%;
@@ -119,14 +125,38 @@ header img{
     font-size: 4rem;
     text-align: center;
     color: var(--color5);
+    margin: 1rem auto 1rem auto;
 }
 
-#page2 .section1 img{
-    margin-left: 2%;
+#about-menu{
+    padding-top: 35vh;
+    margin-left: 20%;
+    width: fit-content;
+}
 
-    width: clamp(200px, 30vw, 250px);
+#about-menu button{
+    position: relative;
+    color: white;
+    background: linear-gradient(to right, #111 10%, rgba(50,50,50), #111 90%);
+    border-color: red;
+    font-size: 1rem;
+    padding: 1vw 2.5vw;
+    border-radius: 50px;
+}
 
-    border-radius: 100%;
+#about-menu button::before{
+    content: '';
+    z-index: -1;
+
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: 105%;
+    height: 115%;
+    border-radius: 50px;
+
+    background-color: #3E89FF;
+    
 }
 
 #page2 .section1 p{
@@ -136,14 +166,6 @@ header img{
     text-align: justify;
 }
 
-#page2 .section1 button{
-    color: white;
-    background: linear-gradient(to right, #333 40%, rgba(255,255,255,.6), #333 60%);
-    border-color: red;
-    font-size: 1.5rem;
-    padding: 15px 50px;
-    border-radius: 50px;
-}
 
 /*     Contact form     */
 .contact-form>label>span{
