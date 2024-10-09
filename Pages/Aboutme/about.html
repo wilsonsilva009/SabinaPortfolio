@@ -11,17 +11,43 @@
 </head>
 
 <body>
-    <img id="main-image" src="Images/pfp.jpg">
 
     <section id="pages" class="site-content">
 
         <section id="page1">
-            <header>
-                <h1 id="title1">Hello</h1>
-                <h2 id="title2">I'm <span>Sabina</span></h2>
-            </header>
 
-            <div id="cv-holder">
+            <img id="main-image" src="Images/pfp.jpg">
+
+            
+            <div id="about-menu">
+                <button>Option 1</button>
+                <button>Option 2</button>
+                <button>Option 3</button>
+            </div>
+
+
+            <div id="about-holder">
+
+                <p id="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Deserunt commodi, iste ab veniam dolores, asperiores at 
+                    adipisci blanditiis magnam vel quisquam natus impedit recusandae 
+                    cumque. Tempore praesentium magnam asperiores odio.
+                </p>
+
+                <div id="polaroid-holder">
+                    <img src="Images/placeholder1.png">
+                    <img src="Images/placeholder2.png">
+                    <img src="Images/placeholder3.png">
+                </div>
+
+            </div>
+
+            <!--------------------TEMPORARILY DISABLED---------------------------->
+
+            <!--     CV HOLDER     -->
+            <div id="cv-holder" style="display:none"><!--I used alt Z or something IDK-->
+                
                 <a href="cv.pdf" style="cursor: default;">
                     <div id="view-cv">
                         View CV
@@ -30,37 +56,10 @@
                 <img src="Images/spiral_arrow_left.webp">
                 <label>See my certifications here!</label>
             </div>
+
         </section><!--End of #page1-->
 
-
         <section id="page2">
-
-            <h1>About me</h1>
-
-            <div class="section1">
-
-                <div id="about-menu">
-                    <button>Option 1</button>
-                    <button>Option 2</button>
-                    <button>Option 3</button>
-                </div>
-
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Deserunt commodi, iste ab veniam dolores, asperiores at 
-                    adipisci blanditiis magnam vel quisquam natus impedit recusandae 
-                    cumque. Tempore praesentium magnam asperiores odio.
-                </p>
-            </div>
-
-
-            <div class="section2">
-
-            </div>
-
-        </section><!--End of #page2-->
-
-        <section id="page3">
 
             <div class="contact-form">
 
@@ -87,7 +86,7 @@
                 </form>
             </div><!--End of .contact-form-->
 
-        </section> <!--End of #page3-->
+        </section> <!--End of #page2-->
 
     </section> <!--End of #pages-->
 

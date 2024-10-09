@@ -21,31 +21,13 @@ a{
 	text-decoration: none !important;
 }
 
-header{
-    color: var(--color1);
-    font-size: 2rem;
-    text-align: center;
-}
-
-#main-image{
-    position: absolute;
-    top: 40vh;
-    left: 50%;
-    transform: translateX(-50%);
-
-    width: clamp(150px, 25vw, 250px);
-
-    border-radius: 100%;
-
-    animation: pfp-anim 1s ease forwards 6.5s;
-    transition: transform .9s ease, top .9s ease, left .9s ease;
-}
-
 /*     Pages Styling     */
 #page1{
-    padding-top: 2%;
-
     height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #page2{
@@ -54,7 +36,126 @@ header{
     height: 100vh;
 }
 
-/*     Header     */
+/*     Site content     */
+
+
+.site-content{
+    margin: 0 5%;
+}
+
+#main-image{
+    width: clamp(150px, 25vw, 200px);
+    border-radius: 100%;
+    margin: 5vh auto;
+
+    animation: pfp-anim 1s ease forwards 6.5s;
+}
+
+#about-holder{
+    display: flex;
+    justify-content: center;
+    
+    gap: 5vw;
+    margin-top: 5vh;
+    width: 100%;
+}
+
+#description{
+    align-self: flex-start;
+    flex: 1;
+    text-align: justify;
+
+    color: white;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+#polaroid-holder{
+    position: relative;
+    flex: 1;
+    perspective: 1000px;
+}
+
+#polaroid-holder img{
+    position: absolute;
+}
+
+#polaroid-holder img:nth-child(1){
+    width: 60%;
+}
+
+#polaroid-holder img:nth-child(2){
+    transform: rotateZ(5deg);
+    width: 50%;
+    left: 20%;
+    top: 20%;
+    z-index: -1;
+}
+
+#polaroid-holder img:nth-child(3){
+    transform: rotateZ(10deg);
+    width: 40%;
+    left: 40%;
+    top: 40%;
+    z-index: -2;
+}
+
+
+/*     About me     */
+
+#about-menu{
+    display: flex;
+    gap: 1.5vw;
+}
+
+#about-menu button{
+    position: relative;
+    color: white;
+    background: linear-gradient(to right, #111 10%, rgba(50,50,50), #111 90%);
+    border-color: red;
+    font-size: 1rem;
+    padding: 1.5vh 2.5vw;
+    border-radius: 50px;
+}
+
+#about-menu button::before{
+    content: '';
+    z-index: -1;
+
+    position: absolute;
+    top: -4px;
+    left: -5px;
+    width: 107%;
+    height: 117%;
+    border-radius: 50px;
+
+    background-color: #3E89FF;
+    
+}
+
+
+/*     CV Holder    */
+
+#cv-holder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    margin: 10vh auto 1rem 43%;
+    width: fit-content;
+}
+
+#cv-holder img{
+    width: clamp(70px, 20vw, 155px);
+    transform: translateY(-18px);
+}
+
+#cv-holder label{
+    font-family: Times New Roman;
+    color: var(--color1);
+    font-size: 1.5rem;
+    transform: translateY(-18px);
+}
 
 #view-cv{
     background: transparent;
@@ -75,95 +176,6 @@ header{
 #view-cv:active{
     filter: brightness(0.8);
     transform: scale(.95);
-}
-
-#cv-holder{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
-    margin: 50vh auto 1rem 43%;
-    width: fit-content;
-}
-
-#cv-holder img{
-    width: clamp(70px, 20vw, 155px);
-    transform: translateY(-18px);
-}
-
-#cv-holder label{
-    font-family: Times New Roman;
-    color: var(--color1);
-    font-size: 1.5rem;
-    transform: translateY(-18px);
-}
-
-#page3{
-    padding-top: 5%;
-
-    height: 100vh;
-}
-
-/*     Site content     */
-#title2 span{
-    color: var(--color3)
-}
-
-.site-content{
-    margin: 0 10%;
-}
-
-#page2 img{
-    width: clamp(200px, 30vw, 250px);
-}
-
-
-/*     About me     */
-
-#page2 h1{
-    font-size: 4rem;
-    text-align: center;
-    color: var(--color5);
-    margin: 1rem auto 1rem auto;
-}
-
-#about-menu{
-    padding-top: 35vh;
-    margin-left: 20%;
-    width: fit-content;
-}
-
-#about-menu button{
-    position: relative;
-    color: white;
-    background: linear-gradient(to right, #111 10%, rgba(50,50,50), #111 90%);
-    border-color: red;
-    font-size: 1rem;
-    padding: 1vw 2.5vw;
-    border-radius: 50px;
-}
-
-#about-menu button::before{
-    content: '';
-    z-index: -1;
-
-    position: absolute;
-    top: -4px;
-    left: -4px;
-    width: 105%;
-    height: 115%;
-    border-radius: 50px;
-
-    background-color: #3E89FF;
-    
-}
-
-#page2 .section1 p{
-    font-size: 1.5rem;
-    color: white;
-    width: 50%;
-    text-align: justify;
 }
 
 
@@ -250,69 +262,6 @@ input:focus, textarea:focus {
 }
 
 /*     Animations     */
-#title1, #title2{
-    position: relative;
-    width: fit-content;
-    margin: 2rem auto;
-}
-
-#title1{
-    font-size: 4rem;
-    padding-right: 10px;
-    border-right: rgba(255,255,255,0) solid 3px;
-
-    animation: caret-blink .8s 3 1s;
-}
-
-#title2{
-    padding-right: 10px;
-    border-right: rgba(255,255,255,0) solid 3px;
-
-    animation: caret-blink .8s 3 4s;
-}
-
-#title1::before{
-    animation: typewrite 1s forwards;
-}
-
-#title2::before{
-    animation: typewrite 1s forwards 3s;
-}
-
-#title1::before, #title2::before{
-    content: '';
-    background-color: #1A1A1A;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-@keyframes typewrite {
-    0%{
-        width: 100%;
-    }
-    
-    100%{
-        width: 0%;
-    }
-}
-
-@keyframes caret-blink {
-    0%{
-        border-right: rgba(255,255,255,0) solid 3px;
-    }
-
-    50%{
-        border-right: rgba(255,255,255,1) solid 3px;
-    }
-
-    100%{
-        border-right: rgba(255,255,255,0) solid 3px;
-    }
-}
 
 @keyframes pfp-anim {
     0%{
@@ -329,18 +278,6 @@ input:focus, textarea:focus {
 @media only screen and (max-width: 600px) {
     .site-content{
         margin: 0 5%;
-    }
-
-    .description{
-        font-size: 1rem;
-    }
-
-    .description>label{
-        display: block;
-        margin: 0 auto;
-        width: fit-content;
-        text-align: center;
-        font-size: 2.5rem;
     }
 
     .submit-button{
