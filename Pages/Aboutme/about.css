@@ -81,6 +81,7 @@ a{
 
 #polaroid-holder img:nth-child(1){
     width: 60%;
+    transform: rotateZ(-3deg);
 }
 
 #polaroid-holder img:nth-child(2){
@@ -107,7 +108,41 @@ a{
     gap: 1.5vw;
 }
 
-#about-menu button{
+#about-menu button {
+    padding: 15px 40px;
+    color: #ff2222;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, #0d0d0d, #232323);
+    cursor: pointer;
+    letter-spacing: 1px;
+    clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%, 15% 50%);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+#about-menu button:hover {
+    background: linear-gradient(135deg, #232323, #632323);
+    color: red;
+    box-shadow: 0 0 15px #ff0000, 0 0 3px #ff0000 inset;
+}
+
+#about-menu button:before {
+    content: '';
+    position: absolute;
+    left: var(--left-position, -25%);
+    opacity: var(--opacity, 1);
+    bottom: -25%;
+    background: white;
+    width: 15px;
+    transform: rotateZ(30deg);
+    height: 150%;
+    z-index: 55;
+    transition: left .5s ease-in-out;
+}
+
+/*#about-menu button{
     position: relative;
     color: white;
     background: linear-gradient(to right, #111 10%, rgba(50,50,50), #111 90%);
@@ -125,12 +160,12 @@ a{
     top: -4px;
     left: -5px;
     width: 107%;
-    height: 117%;
+    height: 120%;
     border-radius: 50px;
 
-    background-color: #3E89FF;
+    background: linear-gradient(45deg, #355b97, #00d0ff);
     
-}
+}*/
 
 
 /*     CV Holder    */

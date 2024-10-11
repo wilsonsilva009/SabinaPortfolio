@@ -31,6 +31,32 @@ function detectScrollDirection(event) {
     
 }
 
-
-
 window.addEventListener('wheel', detectScrollDirection);
+
+var cooldown = false;
+function ClickButton(buttonClicked) {
+    if (cooldown) return;
+
+
+    cooldown = true;
+
+
+    buttonClicked.style.setProperty('--left-position', '125%');
+
+
+    setTimeout(function() {
+        buttonClicked.style.setProperty('--opacity', '0');
+        buttonClicked.style.setProperty('--left-position', '-25%');
+    }, 500);
+
+
+    setTimeout(function() {
+        buttonClicked.style.setProperty('--opacity', '1');
+        cooldown = false;
+    }, 1000);
+    
+}
+
+
+
+
