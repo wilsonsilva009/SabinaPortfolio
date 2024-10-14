@@ -10,6 +10,9 @@ body{
     overflow: hidden;
 }
 
+
+/*          Header          */
+
 header{
     z-index: 100;
     position: fixed;
@@ -20,13 +23,57 @@ header{
 
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 
     background: rgba(47, 46, 46, 0.5);
 }
 
-/*          Header          */
+.ambient-selector{
+    height: 25%;
+    display: flex;
+    margin: 0 0 0 auto;
+}
+
+.ambient-selector div{
+    height: 100%;
+    width: 8px;
+    background: black;
+}
+
+.ambient-selector :nth-child(1){
+    border: 2px outset white;
+    color: #111;
+    font-size: clamp(20px, 1.3vw, 100px);
+    font-weight: bold;
+    width: clamp(50px, 3.5vw, 100px);
+    border-radius: 10px 0 0 10px;
+    box-shadow: inset 0px 0px 30px #aaaaaa;
+    text-shadow: 0 0 10px white;
+    transition: transform .1s ease;
+}
+
+.ambient-selector :nth-child(3){
+    border: 2px outset white;
+    color: #111;
+    font-size: clamp(20px, 1.3vw, 100px);
+    font-weight: bold;
+    width: clamp(50px, 3.5vw, 100px);
+    border-radius: 0 10px 10px 0;
+    background: linear-gradient(-45deg, #aaaaaa, white);
+    text-shadow: 0 0 10px white;
+    transition: transform .1s ease;
+}
+
+.ambient-selector>*:hover:not(div){
+    filter: opacity(.9);
+    border: 4px outset white;
+}
+
+.ambient-selector>*:active{
+    filter: opacity(.9);
+    transform: scale(.95);
+}
 
 header>*{
     margin: 0 5vw;
@@ -56,6 +103,7 @@ header>img:active{
     font-size: 2rem;
     font-weight: bold;
     text-transform: uppercase;
+    text-shadow: 0 0 30px white;
 }
 
 #menu{
@@ -127,10 +175,10 @@ header>img:active{
 }
 
 .image-container button:hover{
-    color: red;
-    border-color: #ff3b3b;
+    color: white;
+    border-color: white;
     transform: scale(1.1) skew(-10deg, -7deg);
-    filter: drop-shadow(2px 4px 6px red);
+    filter: drop-shadow(2px 4px 6px white);
 }
 
 .image-container button:active{

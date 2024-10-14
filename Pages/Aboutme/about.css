@@ -116,7 +116,20 @@ a{
     background: linear-gradient(135deg, #0d0d0d, #232323);
     cursor: pointer;
     letter-spacing: 1px;
-    clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%, 15% 50%);
+    /*clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%, 15% 50%);*/
+
+
+    clip-path:polygon(
+    2px 36px, 
+    37px 2px, 
+    calc(100% - 2px) 2px, 
+    calc(100% - 2px) calc(100% - 36px), 
+    calc(100% - 36px) calc(100% - 2px), 
+    2px calc(100% - 2px), 
+    2px 36px
+    );
+
+    
     transition: all 0.3s ease-in-out;
     position: relative;
     z-index: 1;
