@@ -35,13 +35,42 @@ header{
     margin: 0 0 0 auto;
 }
 
-.ambient-selector div{
-    height: 100%;
-    width: 8px;
-    background: black;
+.ambient-selector button{
+    padding: 0px 45px;
+    color: #ff2222;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, #0d0d0d, #232323);
+    cursor: pointer;
+    letter-spacing: 1px;
+
+    clip-path:polygon(
+    2px 36px, 
+    37px 2px, 
+    calc(100% - 2px) 2px, 
+    calc(100% - 2px) calc(100% - 36px), 
+    calc(100% - 36px) calc(100% - 2px), 
+    2px calc(100% - 2px), 
+    2px 36px
+    );
+
+    
+    transition: all .1s ease-in-out;
+    z-index: 1;
 }
 
-.ambient-selector :nth-child(1){
+.ambient-selector button:hover {
+    background: linear-gradient(135deg, #232323, #632323);
+    color: red;
+    box-shadow: 0 0 15px #ff0000, 0 0 3px #ff0000 inset;
+}
+
+.ambient-selector>*:active{
+    filter: opacity(.9);
+    transform: scale(.9);
+}
+
+/*.ambient-selector :nth-child(1){
     border: 2px outset white;
     color: #111;
     font-size: clamp(20px, 1.3vw, 100px);
@@ -63,17 +92,7 @@ header{
     background: linear-gradient(-45deg, #aaaaaa, white);
     text-shadow: 0 0 10px white;
     transition: transform .1s ease;
-}
-
-.ambient-selector>*:hover:not(div){
-    filter: opacity(.9);
-    border: 4px outset white;
-}
-
-.ambient-selector>*:active{
-    filter: opacity(.9);
-    transform: scale(.95);
-}
+}*/
 
 header>*{
     margin: 0 5vw;

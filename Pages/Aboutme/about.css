@@ -141,7 +141,7 @@ a{
     box-shadow: 0 0 15px #ff0000, 0 0 3px #ff0000 inset;
 }
 
-#about-menu button:before {
+#about-menu button::before {
     content: '';
     position: absolute;
     left: var(--left-position, -25%);
