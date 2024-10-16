@@ -13,11 +13,13 @@ function ToggleMenu(){
 
     if (!MenuOpen)
     {
+        menu.style.pointerEvents = "auto";
         menu.style.opacity = '1';
         menu.style.transform = 'translateY(8rem)';
     }
     else
     {
+        menu.style.pointerEvents = "none";
         menu.style.opacity = '0';
         menu.style.transform = 'translateY(6.5rem)';
     }

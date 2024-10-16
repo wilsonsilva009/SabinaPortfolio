@@ -3,10 +3,14 @@ html{
     scroll-behavior: smooth;
 }
 
+button{
+    font-family: 'Impact'
+}
+
 body{
     position: relative;
     margin: 0;
-    font-family: 'Comic Sans','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Comic Sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     overflow: hidden;
 }
 
@@ -36,66 +40,23 @@ header{
 }
 
 .ambient-selector button{
-    padding: 0px 45px;
-    color: #ff2222;
-    font-size: 1.1rem;
-    font-weight: bold;
-    background: linear-gradient(135deg, #0d0d0d, #232323);
-    cursor: pointer;
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+
+    height: 85%;
+    padding: 0px 25px;
+
+    font-size: 1.2rem;
+    border-radius: 50px;
     letter-spacing: 1px;
 
-    clip-path:polygon(
-    2px 36px, 
-    37px 2px, 
-    calc(100% - 2px) 2px, 
-    calc(100% - 2px) calc(100% - 36px), 
-    calc(100% - 36px) calc(100% - 2px), 
-    2px calc(100% - 2px), 
-    2px 36px
-    );
-
-    
-    transition: all .1s ease-in-out;
-    z-index: 1;
+    align-self: center;
+    cursor: pointer;
 }
-
-.ambient-selector button:hover {
-    background: linear-gradient(135deg, #232323, #632323);
-    color: red;
-    box-shadow: 0 0 15px #ff0000, 0 0 3px #ff0000 inset;
-}
-
-.ambient-selector>*:active{
-    filter: opacity(.9);
-    transform: scale(.9);
-}
-
-/*.ambient-selector :nth-child(1){
-    border: 2px outset white;
-    color: #111;
-    font-size: clamp(20px, 1.3vw, 100px);
-    font-weight: bold;
-    width: clamp(50px, 3.5vw, 100px);
-    border-radius: 10px 0 0 10px;
-    box-shadow: inset 0px 0px 30px #aaaaaa;
-    text-shadow: 0 0 10px white;
-    transition: transform .1s ease;
-}
-
-.ambient-selector :nth-child(3){
-    border: 2px outset white;
-    color: #111;
-    font-size: clamp(20px, 1.3vw, 100px);
-    font-weight: bold;
-    width: clamp(50px, 3.5vw, 100px);
-    border-radius: 0 10px 10px 0;
-    background: linear-gradient(-45deg, #aaaaaa, white);
-    text-shadow: 0 0 10px white;
-    transition: transform .1s ease;
-}*/
 
 header>*{
-    margin: 0 5vw;
+    margin: 0 5vw 0 3vw;
 }
 
 header>img{
@@ -122,10 +83,19 @@ header>img:active{
     font-size: 2rem;
     font-weight: bold;
     text-transform: uppercase;
+    width: 50%;
     text-shadow: 0 0 30px white;
 }
 
+.main-name span{
+    font-size: 1.2rem;
+    margin-left: 2%;
+    opacity: .5;
+}
+
 #menu{
+pointer-events: none;
+
     display: flex;
     flex-direction: column;
     align-items: end;
