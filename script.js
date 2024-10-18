@@ -5,7 +5,39 @@ document.addEventListener('DOMContentLoaded', function() {
     images.forEach((img, index) => {
         img.style.zIndex = ++zIndex;
     });
+
+
+    var CurrentStyle3D = true;
+    const button = document.querySelector('.ambient-selector button');
+
+    function ChangeStyle(){
+        if (CurrentStyle3D){
+            button.textContent = "2D";
+        }else{
+            button.textContent = "3D";
+        }
+        CurrentStyle3D = !CurrentStyle3D;
+    }
+
+    button.addEventListener('mouseenter', () => {
+        ChangeStyle();
+    });
+
+    button.addEventListener('mouseleave', () => {
+        ChangeStyle();
+    });
+
+
+
+
+
+
+
+
 });
+
+
+
 
 let MenuOpen = false;
 function ToggleMenu(){
