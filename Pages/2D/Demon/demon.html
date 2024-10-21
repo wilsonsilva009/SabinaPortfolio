@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Demon</title>
+	<link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+
+    <section class="image-slide" onclick="CloseImage()">
+        <div id="image-holder" onclick="event.stopPropagation()">
+            <img src="../../../Images/2D/demon1.webp" width="100%">
+            
+            
+            <div id="image-switch-buttons">
+                <img src="../../../Images/arrow-flipped.webp" width="50px" onclick="SwitchImage('l')">
+                <img src="../../../Images/arrow.webp" width="50px" onclick="SwitchImage('r')">
+            </div>
+        </div>
+    </section>
+
+
+    <section class="header-image">
+        <img src="../../../Images/2D/demon1.webp" width="100%">
+    </section>
+
+    <section class="site-content">
+
+        <div class="color-effect"></div>
+
+        <div class="content-holder">
+
+
+            <h1 id="title">Demon</h1>
+
+            <p id="description">
+                Text about the Demon here.
+            </p>
+
+            <div class="image-galery">
+                <img src="../../../Images/2D/demon1.webp" onclick="ClickImage(this)">
+                <img src="../../../Images/2D/demon2.webp" onclick="ClickImage(this)">
+                <img src="../../../Images/2D/demon3.webp" onclick="ClickImage(this)">
+            </div>
+
+
+        </div>
+    </section>
+
+
+</body>
+
+</html>

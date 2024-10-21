@@ -1,3 +1,5 @@
+var CurrentStyle3D = true;
+
 document.addEventListener('DOMContentLoaded', function() {
     const images = document.querySelectorAll('.site-content div');
     let zIndex = 0;
@@ -6,14 +8,16 @@ document.addEventListener('DOMContentLoaded', function() {
         img.style.zIndex = ++zIndex;
     });
 
-
-    var CurrentStyle3D = true;
     const button = document.querySelector('.ambient-selector button');
 
     function ChangeStyle(){
         if (CurrentStyle3D){
             button.textContent = "2D";
+            button.style.boxShadow = "0px 0px #0b0b0b";
+            button.style.transform = "translateY(0px)"
         }else{
+            button.style.boxShadow = "0px 10px #0b0b0b";
+            button.style.transform = "translateY(-5px)"
             button.textContent = "3D";
         }
         CurrentStyle3D = !CurrentStyle3D;
@@ -22,17 +26,6 @@ document.addEventListener('DOMContentLoaded', function() {
     button.addEventListener('mouseenter', () => {
         ChangeStyle();
     });
-
-    button.addEventListener('mouseleave', () => {
-        ChangeStyle();
-    });
-
-
-
-
-
-
-
 
 });
 
@@ -78,8 +71,36 @@ function detectScrollDirection(event) {
     IsScrolling = true
 
     const delta = event.deltaY || event.detail || event.wheelDelta;
+    const images = document.querySelectorAll('.site-content div');
+    
+    if (CurrentStyle3D){
 
-    const images = ["#img1", "#img2", "#img3", "#img4"];
+        //images = ["#img1", "#img2", "#img3", "#img4", "#img5", "#img6"];
+
+        images.forEach(image => {
+            if (image.classList.contains('_2D')) {
+                image.style.display = "none";
+            } else if (image.classList.contains('_3D')){
+                image.style.display = "inherit";
+            }
+        });
+
+        
+    } else {
+
+        //images = ["#img1", "#img2", "#img3", "#img4", "#img5", "#img6", "#img7", "#img8", "#img9", "#img10", "#img11", "#img12"];
+
+        images.forEach(image => {
+            if (image.classList.contains('_2D')) {
+                image.style.display = "inherit";
+            } else if (image.classList.contains('_3D')){
+                image.style.display = "none";
+            }
+        });
+
+        
+    }
+    
 
     if (delta > 0) {
         currentIndex++;
