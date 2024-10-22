@@ -1,7 +1,7 @@
 var CurrentStyle3D = false;
 let currentIndex = 0;
 let startIndex = 0;
-let endIndex = 5;
+let endIndex = 6;
 
 document.addEventListener('DOMContentLoaded', function() {
     const images = document.querySelectorAll('.site-content div');
@@ -21,13 +21,13 @@ document.addEventListener('DOMContentLoaded', function() {
             button.textContent = "3D";
             currentIndex = 0;
             startIndex = 0;
-            endIndex = 5; 
+            endIndex = 6; 
         }else{
             button.style.boxShadow = "0px 0px #0b0b0b";
             button.style.transform = "translateY(0px)"
             button.textContent = "2D";
-            currentIndex = 6;
-            startIndex = 6;
+            currentIndex = 7;
+            startIndex = 7;
             endIndex = 17;
         }
 
