@@ -111,7 +111,7 @@ function detectScrollDirection(event) {
     if (currentIndex > endIndex) {
         currentIndex = startIndex;
     } else if (currentIndex < startIndex) {
-        currentIndex = endIndex; /* - 1*/
+        currentIndex = endIndex;
     }
 
     images[currentIndex].scrollIntoView({ behavior: 'smooth' });
