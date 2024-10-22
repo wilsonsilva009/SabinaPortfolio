@@ -1,4 +1,7 @@
-var CurrentStyle3D = true;
+var CurrentStyle3D = false;
+let currentIndex = 0;
+let startIndex = 0;
+let endIndex = 5;
 
 document.addEventListener('DOMContentLoaded', function() {
     const images = document.querySelectorAll('.site-content div');
@@ -11,16 +14,48 @@ document.addEventListener('DOMContentLoaded', function() {
     const button = document.querySelector('.ambient-selector button');
 
     function ChangeStyle(){
+
         if (CurrentStyle3D){
-            button.textContent = "2D";
-            button.style.boxShadow = "0px 0px #0b0b0b";
-            button.style.transform = "translateY(0px)"
-        }else{
             button.style.boxShadow = "0px 10px #0b0b0b";
             button.style.transform = "translateY(-5px)"
             button.textContent = "3D";
+            currentIndex = 0;
+            startIndex = 0;
+            endIndex = 5; 
+        }else{
+            button.style.boxShadow = "0px 0px #0b0b0b";
+            button.style.transform = "translateY(0px)"
+            button.textContent = "2D";
+            currentIndex = 6;
+            startIndex = 6;
+            endIndex = 17;
         }
+
+
+
+        if (CurrentStyle3D) {
+            images.forEach(image => {
+                if (image.classList.contains('_2D')) {
+                    image.style.display = "none";
+                } else if (image.classList.contains('_3D')) {
+                    image.style.display = "inherit";
+                }
+            });
+        } else {
+            images.forEach(image => {
+                if (image.classList.contains('_2D')) {
+                    image.style.display = "inherit";
+                } else if (image.classList.contains('_3D')) {
+                    image.style.display = "none";
+                }
+            });
+        }
+
+
+
+        images[currentIndex].scrollIntoView({ behavior: 'smooth' });
         CurrentStyle3D = !CurrentStyle3D;
+
     }
 
     button.addEventListener('mouseenter', () => {
@@ -61,65 +96,31 @@ window.onscroll = function() {
     }
 };
 
-var IsScrolling = false
-
-let currentIndex = 0;
+let isScrolling = false;
 
 function detectScrollDirection(event) {
-    if (IsScrolling) return
+    if (isScrolling) return;
 
-    IsScrolling = true
+    isScrolling = true;
 
     const delta = event.deltaY || event.detail || event.wheelDelta;
-    const images = document.querySelectorAll('.site-content div');
-    
-    if (CurrentStyle3D){
+    const images = Array.from(document.querySelectorAll('.site-content .image-container'));
 
-        //images = ["#img1", "#img2", "#img3", "#img4", "#img5", "#img6"];
+    currentIndex += delta > 0 ? 1 : -1;
 
-        images.forEach(image => {
-            if (image.classList.contains('_2D')) {
-                image.style.display = "none";
-            } else if (image.classList.contains('_3D')){
-                image.style.display = "inherit";
-            }
-        });
-
-        
-    } else {
-
-        //images = ["#img1", "#img2", "#img3", "#img4", "#img5", "#img6", "#img7", "#img8", "#img9", "#img10", "#img11", "#img12"];
-
-        images.forEach(image => {
-            if (image.classList.contains('_2D')) {
-                image.style.display = "inherit";
-            } else if (image.classList.contains('_3D')){
-                image.style.display = "none";
-            }
-        });
-
-        
-    }
-    
-
-    if (delta > 0) {
-        currentIndex++;
-    } else {
-        currentIndex--;
-    }
-    
-    if (currentIndex >= images.length) {
-        currentIndex = 0;
-    } else if (currentIndex < 0) {
-        currentIndex = images.length - 1;
+    if (currentIndex > endIndex) {
+        currentIndex = startIndex;
+    } else if (currentIndex < startIndex) {
+        currentIndex = endIndex; /* - 1*/
     }
 
-    document.querySelector(images[currentIndex]).scrollIntoView({ behavior: 'smooth' });
+    images[currentIndex].scrollIntoView({ behavior: 'smooth' });
+    console.log(currentIndex);
 
     setTimeout(function() {
-        IsScrolling = false
+        isScrolling = false;
     }, 500);
-    
 }
 
 window.addEventListener('wheel', detectScrollDirection);
+
