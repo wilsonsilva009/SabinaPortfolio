@@ -56,7 +56,27 @@ header{
 
     box-shadow: 0px 10px #0b0b0b;
     transform: translateY(-5px);
-    transition: box-shadow .5s ease-in-out, transform .5s ease-in-out;
+}
+
+@keyframes MainButton2D {
+    0%{
+        box-shadow: 0px 10px #0b0b0b;
+        transform: translateY(-5px);
+    }
+
+    20%{
+        box-shadow: 0px 0px #0b0b0b;
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-10px) rotateX(90deg);
+    }
+
+    100%{
+        transform: translateY(0px) rotateX(0deg);
+        box-shadow: 0px 0px #0b0b0b;
+    }
 }
 
 header>*{
@@ -98,7 +118,7 @@ header>img:active{
 }
 
 #menu{
-pointer-events: none;
+    pointer-events: none;
 
     display: flex;
     flex-direction: column;

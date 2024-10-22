@@ -16,15 +16,25 @@ document.addEventListener('DOMContentLoaded', function() {
     function ChangeStyle(){
 
         if (CurrentStyle3D){
-            button.style.boxShadow = "0px 10px #0b0b0b";
-            button.style.transform = "translateY(-5px)"
+            //button.style.boxShadow = "0px 10px #0b0b0b";
+            //button.style.transform = "translateY(-5px)"
+
+            button.style.animation = "none";
+            void button.offsetWidth;
+            button.style.animation = "MainButton2D .8s ease-in-out backwards reverse";
+
             button.textContent = "3D";
             currentIndex = 0;
             startIndex = 0;
             endIndex = 6; 
         }else{
-            button.style.boxShadow = "0px 0px #0b0b0b";
-            button.style.transform = "translateY(0px)"
+            //button.style.boxShadow = "0px 0px #0b0b0b";
+            //button.style.transform = "translateY(0px)"
+
+            button.style.animation = "none";
+            void button.offsetWidth;
+            button.style.animation = "MainButton2D .8s ease-in-out forwards";
+
             button.textContent = "2D";
             currentIndex = 7;
             startIndex = 7;
