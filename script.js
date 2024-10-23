@@ -1,48 +1,17 @@
 var CurrentStyle3D = false;
+var ClickedButton = false;
 let currentIndex = 0;
 let startIndex = 0;
 let endIndex = 6;
 
+
 document.addEventListener('DOMContentLoaded', function() {
+
+
     const images = document.querySelectorAll('.site-content div');
-    let zIndex = 0;
-
-    images.forEach((img, index) => {
-        img.style.zIndex = ++zIndex;
-    });
-
     const button = document.querySelector('.ambient-selector button');
 
-    function ChangeStyle(){
-
-        if (CurrentStyle3D){
-            //button.style.boxShadow = "0px 10px #0b0b0b";
-            //button.style.transform = "translateY(-5px)"
-
-            button.style.animation = "none";
-            void button.offsetWidth;
-            button.style.animation = "MainButton2D .8s ease-in-out backwards reverse";
-
-            button.textContent = "3D";
-            currentIndex = 0;
-            startIndex = 0;
-            endIndex = 6; 
-        }else{
-            //button.style.boxShadow = "0px 0px #0b0b0b";
-            //button.style.transform = "translateY(0px)"
-
-            button.style.animation = "none";
-            void button.offsetWidth;
-            button.style.animation = "MainButton2D .8s ease-in-out forwards";
-
-            button.textContent = "2D";
-            currentIndex = 7;
-            startIndex = 7;
-            endIndex = 17;
-        }
-
-
-
+    function MainButtonClicked(){
         if (CurrentStyle3D) {
             images.forEach(image => {
                 if (image.classList.contains('_2D')) {
@@ -60,8 +29,29 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         }
+    }
 
+    function ChangeStyle(){
 
+        if (CurrentStyle3D){
+            button.style.animation = "none";
+            void button.offsetWidth;
+            button.style.animation = "MainButton2D .7s ease-in-out backwards reverse";
+
+            button.textContent = "3D";
+            currentIndex = 0;
+            startIndex = 0;
+            endIndex = 6; 
+        }else{
+            button.style.animation = "none";
+            void button.offsetWidth;
+            button.style.animation = "MainButton2D .7s ease-in-out forwards";
+
+            button.textContent = "2D";
+            currentIndex = 7;
+            startIndex = 7;
+            endIndex = 17;
+        }
 
         images[currentIndex].scrollIntoView({ behavior: 'smooth' });
         CurrentStyle3D = !CurrentStyle3D;
@@ -70,6 +60,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     button.addEventListener('mouseenter', () => {
         ChangeStyle();
+    });
+
+    button.addEventListener('click', () => {
+        MainButtonClicked();
     });
 
 });
