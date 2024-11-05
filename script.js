@@ -1,5 +1,6 @@
 var CurrentStyle3D = false;
 var ClickedButton = false;
+var Clicked = false;
 let currentIndex = 0;
 let startIndex = 0;
 let endIndex = 6;
@@ -12,7 +13,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const button = document.querySelector('.ambient-selector button');
 
     function MainButtonClicked(){
+        Clicked = true;
         if (CurrentStyle3D) {
+
+            currentIndex = 0;
+            startIndex = 0;
+            endIndex = 6; 
+
             images.forEach(image => {
                 if (image.classList.contains('_2D')) {
                     image.style.display = "none";
@@ -21,6 +28,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         } else {
+
+            currentIndex = 7;
+            startIndex = 7;
+            endIndex = 17;
+
             images.forEach(image => {
                 if (image.classList.contains('_2D')) {
                     image.style.display = "inherit";
@@ -39,18 +51,14 @@ document.addEventListener('DOMContentLoaded', function() {
             button.style.animation = "MainButton2D .7s ease-in-out backwards reverse";
 
             button.textContent = "3D";
-            currentIndex = 0;
-            startIndex = 0;
-            endIndex = 6; 
+            
         }else{
             button.style.animation = "none";
             void button.offsetWidth;
             button.style.animation = "MainButton2D .7s ease-in-out forwards";
 
             button.textContent = "2D";
-            currentIndex = 7;
-            startIndex = 7;
-            endIndex = 17;
+            
         }
 
         images[currentIndex].scrollIntoView({ behavior: 'smooth' });
@@ -61,6 +69,14 @@ document.addEventListener('DOMContentLoaded', function() {
     button.addEventListener('mouseenter', () => {
         ChangeStyle();
     });
+
+    button.addEventListener('mouseleave', () => {
+        if (!Clicked){
+            ChangeStyle();
+        } else {
+            Clicked = false;
+        }
+    });    
 
     button.addEventListener('click', () => {
         MainButtonClicked();
