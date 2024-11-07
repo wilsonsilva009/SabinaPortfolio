@@ -95,7 +95,6 @@ body{
 
 #image-holder{
     position: relative;
-    width: 75%;
 }
 
 #image-holder>img{
@@ -103,8 +102,6 @@ body{
     border-radius: 25px;
     box-shadow: 0px 0px 15px 2px white;
     max-height: 90vh;
-    object-fit: cover;
-    object-position: 50% 25%;
 }
 
 #image-holder>video{
@@ -112,8 +109,6 @@ body{
     border-radius: 25px;
     box-shadow: 0px 0px 15px 2px white;
     max-height: 90vh;
-    object-fit: cover;
-    object-position: 50% 25%;
     display: none;
     width: 100%;
 }

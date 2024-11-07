@@ -59,7 +59,7 @@ function ClickImage(Image) {
         MainImage.style.display = "none";
 
         MainVideoSource.src = images[currentImageIndex].src;
-        MainVideo.play();
+        //MainVideo.play();
     }
 
     ImageSlide.style.opacity = "1";
