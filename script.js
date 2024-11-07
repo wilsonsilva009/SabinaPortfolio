@@ -3,7 +3,7 @@ var ClickedButton = false;
 var Clicked = false;
 let currentIndex = 0;
 let startIndex = 0;
-let endIndex = 7;
+let endIndex = 8;
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             currentIndex = 0;
             startIndex = 0;
-            endIndex = 7; 
+            endIndex = 8; 
 
             images.forEach(image => {
                 if (image.classList.contains('_2D')) {
@@ -30,9 +30,9 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         } else {
 
-            currentIndex = 8;
-            startIndex = 8;
-            endIndex = 18;
+            currentIndex = 9;
+            startIndex = 9;
+            endIndex = 19;
 
             images.forEach(image => {
                 if (image.classList.contains('_2D')) {

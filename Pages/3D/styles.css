@@ -22,7 +22,7 @@ body{
 /*          Site content          */
 .site-content{
     width: 100%;
-    background: linear-gradient(to right, rgb(173 53 82) -45%, #1f1f23, #3d6181)
+    background: linear-gradient(to right, #2a2a2a -50%, #070707, #2a2a2a 150%);
 }
 
 /*.color-effect{
