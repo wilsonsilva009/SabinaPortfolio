@@ -67,7 +67,7 @@ body{
 }
 
 .image-galery img{
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
     cursor: pointer;
 }
@@ -95,14 +95,16 @@ body{
 
 #image-holder{
     position: relative;
-    width: 50%;
-    max-height: 100vh;
+    width: 75%;
 }
 
 #image-holder>img{
     border: 3px solid white;
     border-radius: 25px;
     box-shadow: 0px 0px 15px 2px white;
+    max-height: 90vh;
+    object-fit: cover;
+    object-position: 50% 50%;
 }
 
 #image-switch-buttons{

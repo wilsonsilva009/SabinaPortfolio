@@ -35,7 +35,7 @@ header{
 
 .ambient-selector{
     perspective: 1000px;
-    height: 25%;
+    height: 50%;
     display: flex;
     margin: 0 0 0 auto;
 }
@@ -48,7 +48,7 @@ header{
     font-size: 1.2rem;
     letter-spacing: 1px;
     padding: 0px 25px;
-    height: 85%;
+    height: 45%;
     cursor: pointer;
     align-self: center;
     border: 2px outset white;

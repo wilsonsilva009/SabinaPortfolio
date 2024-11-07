@@ -3,7 +3,7 @@ var ClickedButton = false;
 var Clicked = false;
 let currentIndex = 0;
 let startIndex = 0;
-let endIndex = 6;
+let endIndex = 7;
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -11,14 +11,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const images = document.querySelectorAll('.site-content div');
     const button = document.querySelector('.ambient-selector button');
+    const ambientselector = document.querySelector('.ambient-selector');
 
     function MainButtonClicked(){
         Clicked = true;
-        if (CurrentStyle3D) {
+        if (!CurrentStyle3D) {
 
             currentIndex = 0;
             startIndex = 0;
-            endIndex = 6; 
+            endIndex = 7; 
 
             images.forEach(image => {
                 if (image.classList.contains('_2D')) {
@@ -29,9 +30,9 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         } else {
 
-            currentIndex = 7;
-            startIndex = 7;
-            endIndex = 17;
+            currentIndex = 8;
+            startIndex = 8;
+            endIndex = 18;
 
             images.forEach(image => {
                 if (image.classList.contains('_2D')) {
@@ -66,11 +67,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     }
 
-    button.addEventListener('mouseenter', () => {
+    ambientselector.addEventListener('mouseenter', () => {
         ChangeStyle();
     });
 
-    button.addEventListener('mouseleave', () => {
+    ambientselector.addEventListener('mouseleave', () => {
         if (!Clicked){
             ChangeStyle();
         } else {
