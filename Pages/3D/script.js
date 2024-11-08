@@ -30,7 +30,7 @@ function SwitchImage(Side) {
     const currentElement = images[currentImageIndex];
 
     if (currentElement.tagName.toLowerCase() == "img"){
-        MainVideo.style.display = "none";
+        if (MainVideo) MainVideo.style.display = "none";
         MainImage.style.display = "block";
 
         MainImage.src = images[currentImageIndex].src;
@@ -38,8 +38,12 @@ function SwitchImage(Side) {
         MainVideo.style.display = "block";
         MainImage.style.display = "none";
 
-        MainVideoSource.src = images[currentImageIndex].src;
-        //MainVideo.play();
+        const source = currentElement.querySelector("source");
+
+        MainVideoSource.src = source.src;
+
+        MainVideo.load();
+        MainVideo.play();
     }
 
 }
@@ -50,7 +54,7 @@ function ClickImage(Image) {
     const currentElement = images[currentImageIndex];
 
     if (currentElement.tagName.toLowerCase() == "img"){
-        MainVideo.style.display = "none";
+        if (MainVideo) MainVideo.style.display = "none";
         MainImage.style.display = "block";
 
         MainImage.src = images[currentImageIndex].src;
@@ -58,8 +62,12 @@ function ClickImage(Image) {
         MainVideo.style.display = "block";
         MainImage.style.display = "none";
 
-        MainVideoSource.src = images[currentImageIndex].src;
-        //MainVideo.play();
+        const source = currentElement.querySelector("source");
+
+        MainVideoSource.src = source.src;
+
+        MainVideo.load();
+        MainVideo.play();
     }
 
     ImageSlide.style.opacity = "1";
