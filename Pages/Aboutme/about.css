@@ -9,6 +9,7 @@
 
 /*     Principal Styling     */
 body{
+    position: relative;
     background: linear-gradient(45deg, black, #222);
     min-height: 100vh;
     font-family: 'Comic Sans','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -41,6 +42,37 @@ a{
 
 .site-content{
     margin: 0 5%;
+}
+
+.contact-links{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.pages-display{
+    position: fixed;
+    top: 50vh;
+    right: 1.5vw;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pages-display>div{
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    transform: scale(1.1);
+    border-radius: 100%;
+    border: 3px white solid;
+    transition: background-color .5s ease, transform .5s ease;
+}
+
+.pages-display>:nth-child(2){
+    transform: scale(1);
+    background-color: transparent;
 }
 
 #main-image{

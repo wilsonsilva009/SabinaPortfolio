@@ -23,6 +23,21 @@ function detectScrollDirection(event) {
         currentIndex = pages.length - 1;
     }
 
+    
+    if (currentIndex == 0){
+        document.getElementById("pagesdisplay1").style.backgroundColor = "white";
+        document.getElementById("pagesdisplay1").style.transform = "scale(1.1)";
+
+        document.getElementById("pagesdisplay2").style.backgroundColor = "transparent";
+        document.getElementById("pagesdisplay2").style.transform = "scale(1)";
+    }else{
+        document.getElementById("pagesdisplay1").style.backgroundColor = "transparent";
+        document.getElementById("pagesdisplay1").style.transform = "scale(1)"
+        ;
+        document.getElementById("pagesdisplay2").style.backgroundColor = "white";
+        document.getElementById("pagesdisplay2").style.transform = "scale(1.1)";
+    }
+
     document.querySelector(pages[currentIndex]).scrollIntoView({ behavior: 'smooth' });
 
     setTimeout(function() {
@@ -66,8 +81,9 @@ function ClickButton(buttonClicked) {
             document.getElementById("description").innerHTML = `
             Find out more about me:<br><br>
 
-            sabinapawlow@gmail.com<br>
-            www.linkedin.com/in/sabina-pawłów
+            <div class="contact-links"><img src="Images/Github.png" width="50px"><a href="https://github.com/kenonash" target="_blank">https://github.com/kenonash</a></div>
+            <div class="contact-links"><img src="Images/sketchfab.svg" width="50px"><a href="https://sketchfab.com/sabinapawlow" target="_blank">https://sketchfab.com/sabinapawlow</a></div>
+            <div class="contact-links"><img src="Images/artstation.webp" width="50px"><a href="https://www.artstation.com/kenonahs" target="_blank">https://www.artstation.com/kenonahs</a></div>
             `;
             break;
         
