@@ -86,28 +86,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
-
-let MenuOpen = false;
-function ToggleMenu(){
-    menu = document.querySelector("#menu");
-
-    if (!MenuOpen)
-    {
-        menu.style.pointerEvents = "auto";
-        menu.style.opacity = '1';
-        menu.style.transform = 'translateY(8rem)';
-    }
-    else
-    {
-        menu.style.pointerEvents = "none";
-        menu.style.opacity = '0';
-        menu.style.transform = 'translateY(6.5rem)';
-    }
-
-    MenuOpen = !MenuOpen;
-}
-
 window.onscroll = function() {
     const phone_button = document.querySelector("#phone-scroll-button");
     if (window.scrollY > 100) {
