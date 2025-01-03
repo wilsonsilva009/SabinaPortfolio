@@ -20,19 +20,16 @@
 
             
             <div id="about-menu">
-                <button onclick="ClickButton(this)">Option 1</button>
-                <button onclick="ClickButton(this)">Option 2</button>
-                <button onclick="ClickButton(this)">Option 3</button>
+                <button id="button1" onclick="ClickButton(this); ShowPollaroid();">About me</button>
+                <button id="button2" onclick="ClickButton(this); ShowSkills();">Skills</button>
+                <button id="button3" onclick="ClickButton(this); ShowPollaroid();">Contact me</button>
             </div>
 
 
             <div id="about-holder">
 
                 <p id="description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Deserunt commodi, iste ab veniam dolores, asperiores at 
-                    adipisci blanditiis magnam vel quisquam natus impedit recusandae 
-                    cumque. Tempore praesentium magnam asperiores odio.
+                    Hello! My name is Sabina, and I’m a passionate 3D Character Artist with a degree in Creative Media.<br><br>I thrive on crafting unique and immersive characters that bring stories to life. I specialize in creating high-quality assets optimized for video games.<br><br>I’m constantly seeking new challenges that push my artistic and technical boundaries. When I’m not creating characters, you’ll likely find me drawing inspiration from movies, gaming, or sketching ideas for my next project.
                 </p>
 
                 <div id="polaroid-holder">
@@ -41,13 +38,82 @@
                     <img src="Images/placeholder3.png">
                 </div>
 
+                <div id="skills-caroussel">
+
+                    <div id="holder1">
+                        <!--<div class="holder-arrows">
+                            <img src="Images/../../../Images/arrow-flipped.webp">
+                            <img src="Images/../../../Images/arrow.webp">
+                        </div>-->
+
+                        <div class="holder-imgs">
+                            <img src="Images/ZBrush.png">
+                            <img src="Images/Blender.png">
+                            <img src="Images/Substance3DPainter.png">
+                            <img src="Images/MarmosetToolbag.png">
+                            <img src="Images/Maya.png">
+                            <img src="Images/MotionBuilder.png">
+
+                            <!---------------->
+
+                            <img src="Images/ZBrush.png">
+                            <img src="Images/Blender.png">
+                            <img src="Images/Substance3DPainter.png">
+                        </div>
+
+                    </div>
+
+                    <div id="holder2">
+                        <!--<div class="holder-arrows">
+                            <img src="Images/../../../Images/arrow-flipped.webp">
+                            <img src="Images/../../../Images/arrow.webp">
+                        </div>-->
+                        
+                        <div class="holder-imgs">
+                            <img src="Images/Photoshop.png">
+                            <img src="Images/Illustrator.png">
+                            <img src="Images/AfterEffects.png">
+                            <img src="Images/PremierePro.png">
+
+                            <!---------------->
+
+                            <img src="Images/Photoshop.png">
+                            <img src="Images/Illustrator.png">
+                            <img src="Images/AfterEffects.png">
+                        </div>
+
+                    </div>
+
+                    <div id="holder3">
+                        <!--<div class="holder-arrows">
+                            <img id="left" onclick="ArrowClicked(this)" src="Images/../../../Images/arrow-flipped.webp">
+                            <img id="right" onclick="ArrowClicked(this)" src="Images/../../../Images/arrow.webp">
+                        </div>-->
+                        
+                        <div class="holder-imgs">
+                            <img src="Images/Unity.webp">
+                            <img src="Images/UnrealEngine.webp">
+                            <img src="Images/Godot.png">
+                            <img src="Images/Github.png">
+
+                            <!---------------->
+
+                            <img src="Images/Unity.webp">
+                            <img src="Images/UnrealEngine.webp">
+                            <img src="Images/Godot.png">
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
 
             <!--------------------TEMPORARILY DISABLED---------------------------->
 
             <!--     CV HOLDER     -->
-            <div id="cv-holder" style="display:none"><!--I used alt Z or something IDK-->
-                
+            <div id="cv-holder" style="display:none">
+
                 <a href="cv.pdf" style="cursor: default;">
                     <div id="view-cv">
                         View CV
