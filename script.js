@@ -10,8 +10,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     const images = document.querySelectorAll('.site-content div');
-    const button = document.querySelector('.ambient-selector button');
-    const ambientselector = document.querySelector('.ambient-selector');
+    const button1 = document.querySelector('.ambient-selector button');
+    const button2 = document.querySelector('.ambient-selector a');
+
 
     function MainButtonClicked(){
         Clicked = true;
@@ -47,18 +48,24 @@ document.addEventListener('DOMContentLoaded', function() {
     function ChangeStyle(){
 
         if (CurrentStyle3D){
-            button.style.animation = "none";
-            void button.offsetWidth;
-            button.style.animation = "MainButton2D .7s ease-in-out backwards reverse";
+            button1.style.animation = "none";
+            button2.style.animation = "none";
+            void button1.offsetWidth;
+            void button2.offsetWidth;
+            button1.style.animation = "MainButton2D .7s ease-in-out backwards reverse";
+            button2.style.animation = "MainButton2D .7s ease-in-out backwards reverse";
 
-            button.textContent = "3D";
+            button1.textContent = "3D";
             
         }else{
-            button.style.animation = "none";
-            void button.offsetWidth;
-            button.style.animation = "MainButton2D .7s ease-in-out forwards";
+            button1.style.animation = "none";
+            button2.style.animation = "none";
+            void button1.offsetWidth;
+            void button2.offsetWidth;
+            button1.style.animation = "MainButton2D .7s ease-in-out forwards";
+            button2.style.animation = "MainButton2D .7s ease-in-out forwards";
 
-            button.textContent = "2D";
+            button1.textContent = "2D";
             
         }
 
@@ -67,11 +74,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     }
 
-    ambientselector.addEventListener('mouseenter', () => {
+    button1.addEventListener('mouseenter', () => {
         ChangeStyle();
     });
 
-    ambientselector.addEventListener('mouseleave', () => {
+    button1.addEventListener('mouseleave', () => {
         if (!Clicked){
             ChangeStyle();
         } else {
@@ -79,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });    
 
-    button.addEventListener('click', () => {
+    button1.addEventListener('click', () => {
         MainButtonClicked();
     });
 
