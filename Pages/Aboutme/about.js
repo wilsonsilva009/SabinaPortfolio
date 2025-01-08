@@ -62,6 +62,7 @@ function ClickButton(buttonClicked) {
         
         case "button2":
             document.getElementById("description").innerHTML = `
+            <div class="description-holder">
             I am dedicated to continuously improving the quality and creativity of my work through intensive learning and practice. My core expertise lies in the entire character creation pipeline. This includes:<br><br>
             
                 <ul>
@@ -74,7 +75,8 @@ function ClickButton(buttonClicked) {
 
             
             I am also proficient in multiple game engines, including Unreal Engine 5 (UE5), Unity, and Godot, enabling seamless integration of assets into interactive environments. I am proficient in using version control systems like GitHub to collaborate with team members effectively. My adaptability allows me to tailor my work to meet specific project requirements, whether working independently or within a collaborative team.
-                `;
+            </div>    
+            `;
             break;
 
         case "button3":

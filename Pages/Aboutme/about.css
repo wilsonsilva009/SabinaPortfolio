@@ -88,9 +88,40 @@ a{
     justify-content: center;
     align-items: center;
     
-    gap: 5vw;
+    gap: 3vw;
     margin-top: 5vh;
     width: 100%;
+}
+
+/* Chrome, Edge and Safari */
+.description-holder::-webkit-scrollbar {
+    width: 10px;
+}
+
+.description-holder::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: rgba(255,255,255,.1);
+}
+
+.description-holder::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255,.6);
+}
+
+.description-holder::-webkit-scrollbar-thumb:hover{
+    background-color: rgba(255, 255, 255, .5);
+}
+
+.description-holder::-webkit-scrollbar-thumb:active{
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.description-holder{
+    max-height: 45vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    padding-right: 20px;
 }
 
 #description{
@@ -108,7 +139,7 @@ a{
 
     border: 5px solid white;
 
-    width: 600px;
+    width: 40vw;
     height: fit-content;
 }
 
@@ -210,10 +241,12 @@ a{
     perspective: 1000px;
     flex: 1;
     height: 100%;
+    max-width: 35vw;
 }
 
 #polaroid-holder img{
     position: absolute;
+    transition: transform .3s ease, box-shadow .3s ease;
 }
 
 #polaroid-holder img:nth-child(1){
@@ -237,6 +270,22 @@ a{
     z-index: -2;
 }
 
+#polaroid-holder img:nth-child(1):hover{
+    transform: rotateZ(-8deg) scale(1.05);
+}
+
+#polaroid-holder img:nth-child(2):hover{
+    transform: rotateZ(0deg) scale(1.05);
+}
+
+#polaroid-holder img:nth-child(3):hover{
+    transform: rotateZ(5deg) scale(1.05);
+}
+
+#polaroid-holder img:hover{
+    box-shadow: 0px 0px 20px 5px rgba(255,255,255,0.3);
+    z-index: 10;
+}
 
 /*     About me     */
 
