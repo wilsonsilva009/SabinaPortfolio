@@ -21,9 +21,11 @@
 
         <section id="page1">
 
-            <img id="main-image" src="Images/pfp.png">
+            <div id="main-image-holder" style="position: relative; perspective: 3000px;">
+                <audio id="oiia" src="Images/oiia.mp3"></audio>
+                <img onclick="Surprise()" id="main-image" src="Images/pfp.png">
+            </div>
 
-            
             <div id="about-menu">
                 <button id="button1" onclick="ClickButton(this); ShowPollaroid();">About me</button>
                 <button id="button2" onclick="ClickButton(this); ShowSkills();">Skills</button>

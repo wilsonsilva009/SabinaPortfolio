@@ -120,6 +120,29 @@ function ShowSkills(){
     skills_caroussel.style.display = "flex";
 }
 
+var surprise_cooldown = false;
+function Surprise(){
+    if (surprise_cooldown) return;
+
+    surprise_cooldown = true;
+    document.documentElement.style.setProperty('--surprise-left', '105%');
+    const _audio = document.getElementById("oiia");
+    _audio.play();
+
+    setTimeout(() => {
+        document.documentElement.style.setProperty('--surprise-animation','rotate-surprise 1s linear infinite')
+    }, 3000);
+
+    setTimeout(() => {
+        document.documentElement.style.setProperty('--surprise-animation','none')
+    }, 5000);
+
+    setTimeout(() => {
+        document.documentElement.style.setProperty('--surprise-left', '50%');
+        surprise_cooldown = false;
+    }, 6000);
+}
+
 /*
 
 var holder1_val = 0;

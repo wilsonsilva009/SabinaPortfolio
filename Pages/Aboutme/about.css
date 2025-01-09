@@ -5,6 +5,8 @@
     --color3: white;
     --color4: #3E8989;
     --color5: #0ec5bd;
+    --surprise-left: 50%;
+    --surprise-animation: none;
 }
 
 /*     Principal Styling     */
@@ -24,6 +26,7 @@ a{
 
 /*     Pages Styling     */
 #page1{
+    position: relative;
     height: 100vh;
 
     display: flex;
@@ -81,6 +84,33 @@ a{
     margin: 5vh auto;
 
     animation: pfp-anim 1s ease forwards 6.5s;
+}
+
+#main-image-holder::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: var(--surprise-left);
+    transform: translateX(-50%) translateY(-50%);
+    width: 150%;
+    height: 100%;
+    background: url("Images/surprise.png");
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    z-index: -1;
+    transition: left 1s ease;
+    animation: var(--surprise-animation)
+}
+
+@keyframes rotate-surprise {
+    0%{
+        transform: translateX(-50%) translateY(-50%) rotateY(0deg);
+    }
+
+    100%{
+        transform: translateX(-50%) translateY(-50%) rotateY(360deg);
+    }
 }
 
 #about-holder{
